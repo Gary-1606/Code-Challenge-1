@@ -36,6 +36,7 @@ export const GameTile: React.FC = () => {
 
   const onActionBtnClick = (action: Action) => {
     setError(null)
+    SetIsReport(false)
     let updatedCommands = [...commands]
 
     if (action === "Place") {
@@ -84,6 +85,7 @@ export const GameTile: React.FC = () => {
       SetIsReport(true)
       setCommands(updatedCommands)
       return
+
     }
   }
 
@@ -106,6 +108,8 @@ export const GameTile: React.FC = () => {
         </S.Select>
         <Button buttonText="Place" onBtnClick={onActionBtnClick} />
       </S.InputContainer>
+      {xPos !== undefined && yPos !== undefined && direction !== undefined && <S.Div>{`Current position: ${xPos}, ${yPos}, ${direction}`}</S.Div>}
+
       {error && <Alert isError message={error} />}
       {isReport && <Alert message={`Your pacman has reached the destination and is at ${xPos}, ${yPos} and is facing ${direction}`} />}
       <S.ActionsContainer>
@@ -150,5 +154,9 @@ const S = {
   `,
   CommandContainer: styled.ul`
     text-align: left;
+  `,
+  Div: styled.div`
+    margin-bottom: ${Spacing.u4};
+    font-weight: bold;
   `,
 }
