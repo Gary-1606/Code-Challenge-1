@@ -2,6 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Note
+
+1. I have created an application wherein the user can interact directly by providing action commands, instead of the actions commands being passed as input. All the necessary validations are hanlded. 
+
+## Steps to use the repository
+
+1. Download the repository
+2. Run 'npm install' to install the node modules
+3. Run 'npm start' to run the dev server at 'http://localhost:3000/' 
+
+## Technology Used
+
+1. Framework - React (Functional components) - As the application is highly view oriented
+2. Typescript - To avoid run time errors
+3. Styled components - To leverage the capability of using JS in CSS
+4. Prettier and eslint config - To handle the linting and formatting of the code base
+5. Workspace setting - Included engineering-test workspace configuration
+6. Validations has been added
+
 ## Available Scripts
 
 In the project directory, you can run:
